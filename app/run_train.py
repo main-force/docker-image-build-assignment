@@ -1,7 +1,7 @@
 import numpy as np
 from tensorflow import keras
 from sklearn.model_selection import train_test_split
-from keras import layers
+from tensorflow.keras import layers
 import PIL
 import os
 import pickle
@@ -44,8 +44,7 @@ def run():
     )
 
     ## Save pickle
-    with open("model.pckl", "wb") as fw:
-        pickle.dump(model, fw)
+    model.save('model.h5')
 
 
 
